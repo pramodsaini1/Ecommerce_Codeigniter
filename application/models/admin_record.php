@@ -301,5 +301,33 @@ class admin_record extends CI_Model{
         $this->db->delete("ec_product");
         return true;
     }
+    public function get_all_users(){
+        $this->db->select("*");
+        $this->db->from("ec_users");
+        return $this->db->get()->result();
+    }
+    public function block_user($user_id){
+        $this->db->select("*");
+        $this->db->from("ec_users");
+        $this->db->where("user_id",$user_id);
+        foreach($this->db->get()->result() as $row){
+            if($row->status==0){
+                $data=array(
+                    "status"=>1
+                );
+                $this->db->where("user_id",$user_id);
+                $this->db->update("ec_users",$data);
+                return"block";
+            }
+            else if($row->status==1){
+                  $data=array(
+                    "status"=>0
+                  );
+                  $this->db->where("user_id",$user_id);
+                  $this->db->update("ec_users",$data);
+                  return"unblock";
+            }
+        }
+    }
 }
 ?>

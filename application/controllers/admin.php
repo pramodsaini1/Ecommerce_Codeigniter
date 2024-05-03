@@ -422,6 +422,29 @@ class admin extends CI_Controller{
             }
         }
      }
+      public function users(){
+        if($this->session->userdata("admin")){
+            $recd["rec"]=$this->admin_record->get_all_users();
+            $this->load->view("all_users.php",$recd);
+        }
+        else{
+            redirect(base_url()."admin/index");
+        }
+      }
+      public function block_user(){
+         if($this->session->userdata("admin")){
+            $user_id=$this->input->post("user_id");
+             if($this->admin_record->block_user($user_id)=="block"){
+                 echo"block";
+             }
+             else{
+                echo"unblock";
+             }
+         }
+         else{
+            redirect(base_url()."admin/index");
+         }
+      }
      
 }
 ?>

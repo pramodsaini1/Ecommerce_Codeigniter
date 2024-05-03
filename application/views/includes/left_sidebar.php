@@ -64,6 +64,12 @@
                    <span>Add Product</span>
                </a>
            </li>
+           <li>
+               <a href="<?=base_url()."admin/users"?>" class="waves-effect">
+                   <i class="uim uim-airplay"></i> 
+                   <span>All Users</span>
+               </a>
+           </li>
    
     
 

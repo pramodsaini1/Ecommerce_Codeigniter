@@ -210,11 +210,14 @@ class Record extends CI_Model{
      }
      public function update_cart($post,$user_id){
         for($i=0;$i<sizeof($post);$i++){
-            $this->db->where(["product_id"=>$post["product_id"][$i],"user_id"=>$user_id]);
-            $this->db->update("ec_cart",["product_quantity"=>$post["product_quantity"][$i]]);
+           if($this->db->where(["product_id"=>$post["product_id"][$i],"user_id"=>$user_id])->update("ec_cart",["product_quantity"=>$post["product_quantity"][$i]])){
+              return true;
+           }
+           else{
+              return false;
+           }
         }
-        return true;
-     }
+      }
      public function delete_cart($product_id,$user_id){
         $this->db->where(["product_id"=>$product_id,"user_id"=>$user_id]);
         $this->db->delete("ec_cart");
