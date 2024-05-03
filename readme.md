@@ -66,5 +66,22 @@ Technology Stack:
   <img src="Screenshot (103).png" class="img-fluid"><br><br>
 
   ## Admin Page
-   <img src="Screenshot (104).png" class="img-fluid"><br><br>
+   <img src="Screenshot (105).png" class="img-fluid"><br><br>
 
+## Dashboard Page
+<img src="Screenshot (104).png" class="img-fluid"><br><br>
+
+## Category Page
+<img src="Screenshot (106).png" class="img-fluid"><br><br>
+
+## Pin Code Page
+<img src="Screenshot (107).png" class="img-fluid"><br><br>
+
+## Banner Page
+<img src="Screenshot (108).png" class="img-fluid"><br><br>
+
+## Product Page
+<img src="Screenshot (109).png" class="img-fluid"><br><br>
+
+## All Users Page
+<img src="Screenshot (110).png" class="img-fluid"><br><br>
