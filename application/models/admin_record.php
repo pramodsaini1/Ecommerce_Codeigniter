@@ -329,5 +329,10 @@ class admin_record extends CI_Model{
             }
         }
     }
+    public function delete_user($user_id){
+        $this->db->where("user_id",$user_id);
+        $this->db->delete("ec_users");
+        return true;
+    }
 }
 ?>

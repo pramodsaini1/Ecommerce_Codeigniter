@@ -52,7 +52,7 @@ $this->load->view("includes/header");
                                                          <td><?=$row->phone?></td>
                                                          <td><?=$row->ip?></td>
                                                          <td><button class="btn btn-info" id="block-<?=$row->user_id?>" rel="<?=$row->user_id?>">Unblock</button></td>
-                                                         <td><button class="btn btn-danger" id="delete-<?=$row->user_id?>" rel="<?=$row->user_id?>">Delete</button</td>
+                                                         <td id="delete-<?=$row->user_id?>"><button class="btn btn-danger"   rel="<?=$row->user_id?>">Delete</button</td>
                                                         <?php
                                                       
                                                   ?>
@@ -109,6 +109,19 @@ $this->load->view("includes/header");
                                 }
                             }
                         })
+                    })
+                    $(".btn.btn-danger").click(function(){
+                        var user_id=$(this).attr("rel");
+                         $.ajax({
+                           url:"<?=base_url()."admin/delete_user"?>",
+                           type:"POST",
+                           data:{user_id:user_id},
+                           success:function(data){
+                               if(data=="success"){
+                                 $("#delete-"+user_id).fadeOut();
+                               }
+                           }
+                         })
                     })
                 })
             </script>

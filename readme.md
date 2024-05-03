@@ -36,7 +36,7 @@ Scalable architecture to handle increasing traffic and data volume.
 Technology Stack:
 
 # Backend: CodeIgniter PHP framework for robust server-side logic.
-# Frontend: HTML5, CSS3, JavaScript for responsive and interactive user interfaces.
+# Frontend: HTML5, CSS3, JavaScript ,JQuery,Ajax for responsive and interactive user interfaces.
 # Database: MySQL  for efficient data storage and retrieval.
  
 
@@ -64,4 +64,7 @@ Technology Stack:
 
   ## User Details
   <img src="Screenshot (103).png" class="img-fluid"><br><br>
+
+  ## Admin Page
+   <img src="Screenshot (104).png" class="img-fluid"><br><br>
 

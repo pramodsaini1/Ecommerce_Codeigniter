@@ -445,6 +445,20 @@ class admin extends CI_Controller{
             redirect(base_url()."admin/index");
          }
       }
+      public function delete_user(){
+        if($this->session->userdata("admin")){
+          $user_id=$this->input->post("user_id");
+          if($this->admin_record->delete_user($user_id)){
+               echo"success";
+          }
+          else{
+              echo"again";
+          }
+        }
+        else{
+            redirect(base_url()."admin/index");
+        }
+      }
      
 }
 ?>
